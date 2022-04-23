@@ -63,7 +63,7 @@ pipeline {
       stage('Scan Container Using Trivy') {
          steps {
             powershell (script: """
-            docker run --rm -v 'C:\Users\Ahmed Ra''fat:/root/.cache/' aquasec/trivy:0.19.2 ahmedraafat880/docker:docker
+            docker run --rm -v C:/Users/Ahmed Ra'fat:/root/.cache/ aquasec/trivy:0.19.2 ahmedraafat880/docker:docker
             """)
          }
       }
