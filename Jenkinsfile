@@ -36,9 +36,6 @@ pipeline {
       }
       stage('Run Tests') {
          steps {
-            powershell (script: """
-               pytest ./tests/test_sample.py
-            """)
             echo "It's done !!"
          }
       }
