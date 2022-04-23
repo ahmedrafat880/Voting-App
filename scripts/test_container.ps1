@@ -3,7 +3,7 @@ do {
     $count++
     Write-Output "[$env:STAGE_NAME] Starting container [Attempt: $count]"
     Write-Output "Before sleep"
-    Start-Sleep -s 30
+    Start-Sleep -s 15
     Write-Output "After sleep"
     $testStart = Invoke-WebRequest -Uri http://localhost:8000 -UseBasicParsing
     Write-Output "Before sleep"
