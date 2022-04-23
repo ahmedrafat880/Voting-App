@@ -53,14 +53,12 @@ pipeline {
             dir("$WORKSPACE/azure-vote") {
               script {
                docker.withRegistry('https://index.docker.io/v1/', 'DockerHub') {
-                  def image = docker.build('docker:docker')
+                  def image = docker.build('ahmedraafat880/docker:docker')
+                  image.push()
                }
             } 
             }
-            withDockerRegistry([ credentialsId: "DockerHub", url: "" ]) {
-            powershell "docker push docker:docker"
          }
       }
     }
-}
 }
