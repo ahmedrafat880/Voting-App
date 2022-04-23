@@ -36,7 +36,7 @@ pipeline {
           }
        }
        stage('Run Tests') {
-          steps {`
+          steps {
              echo "It's done !!"
           }
        }
