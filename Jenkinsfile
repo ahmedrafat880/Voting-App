@@ -54,10 +54,11 @@ pipeline {
               script {
                docker.withRegistry('https://index.docker.io/v1/', 'DockerHub') {
                   def image = docker.build('docker:docker')
-                  image.push()
                }
             } 
             }
+            withDockerRegistry([ credentialsId: "DockerHub", url: "" ]) {
+            powershell "docker push docker:docker"
          }
       }
     }
