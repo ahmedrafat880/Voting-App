@@ -62,10 +62,11 @@ pipeline {
       // }
       stage('Scan Container Using Trivy') {
          steps {
-            powershell (script: """
-            docker run --rm -v 'C:/Users/Ahmed Ra''fat:/root/.cache/' aquasec/trivy:0.19.2 ahmedraafat880/docker:docker
-            """)
-         }
+                  sleep(time: 30, unit: 'SECONDS')
+                  // pwsh(script: """
+                  // C:\\Windows\\System32\\wsl.exe -- sudo trivy ahmedraafat880/docker:docker
+                  // """)
+               }
       }
     }
 }
