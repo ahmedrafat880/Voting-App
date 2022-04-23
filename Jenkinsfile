@@ -53,7 +53,7 @@ pipeline {
             dir("$WORKSPACE/azure-vote") {
               script {
                docker.withRegistry('https://index.docker.io/v1/', 'DockerHub') {
-                  def image = docker.build('docker:latest')
+                  def image = docker.build('docker:docker')
                   image.push()
                }
             } 
