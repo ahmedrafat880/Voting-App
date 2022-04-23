@@ -64,7 +64,8 @@ pipeline {
          steps {
                   sleep(time: 5, unit: 'SECONDS')
                   powershell (script: """
-                   docker run --rm -v 'C:\\Users\\Ahmed Ra''fat:/root/.cache/' aquasec/trivy:0.19.2 ahmedraafat880/docker
+                   docker login -u ahmedraafat880 -p 123@Mohamed https://index.docker.io/v1/
+                   docker run --rm -v 'C:\\Users\\Ahmed Ra''fat:/root/.cache/' aquasec/trivy:0.19.2 ahmedraafat880/docker:docker
                    """)
                }
       }
