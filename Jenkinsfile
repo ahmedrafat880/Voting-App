@@ -38,13 +38,13 @@ pipeline {
       stage('Run Tests') {
          steps {
             powershell (script: """
-               python ./tests/test_sample.py
+               pytest ./tests/test_sample.py
             """)
          }
       }
       stage('Stop test app') {
          steps {
-            pwsh(script: """
+            powershell (script: """
                docker-compose down
             """)
          }
