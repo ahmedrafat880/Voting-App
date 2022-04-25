@@ -62,7 +62,7 @@ pipeline {
       // }
       stage('Scan Container Using Trivy') {
          steps {
-                  shell 'sudo docker images -ls'
+                  sh 'sudo docker images -ls'
                }
       }
     }
