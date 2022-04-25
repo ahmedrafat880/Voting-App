@@ -62,8 +62,7 @@ pipeline {
       // }
       stage('Scan Container Using Trivy') {
          steps {
-                  sleep(time: 30, unit: 'SECONDS')
-                  powershell(script: """
+                  powershell (script: """
                    C:\\Windows\\System32\\wsl.exe -- sudo trivy ahmedraafat880/docker
                    """)
                }
