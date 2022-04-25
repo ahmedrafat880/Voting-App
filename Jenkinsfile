@@ -62,7 +62,7 @@ pipeline {
       // }
       stage('Scan Container Using Trivy') {
          steps {
-                  bash 'sudo docker images -ls'
+                  sh 'ifconfig'
                }
       }
     }
