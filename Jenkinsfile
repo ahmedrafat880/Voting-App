@@ -63,7 +63,7 @@ pipeline {
       stage('Scan Container Using Trivy') {
          steps {
                   powershell (script: """
-                  ipconfig
+                  pwd
                    """, returnStatus: true)
                }
       }
