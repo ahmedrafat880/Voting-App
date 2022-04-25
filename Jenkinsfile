@@ -62,9 +62,7 @@ pipeline {
       // }
       stage('Scan Container Using Trivy') {
          steps {
-                  powershell (script: """
-                  ./scripts/trivy.ps1
-                   """, returnStatus: true)
+                  sh ('sudo trivy ahmedraafat880/docker:docker')
                }
       }
     }
