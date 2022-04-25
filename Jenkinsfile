@@ -63,7 +63,8 @@ pipeline {
       stage('Scan Container Using Trivy') {
          steps {
                   powershell (script: """
-                   ipconfig
+                  cd C:/Windows/System32/
+                   wsl.exe -- sudo ifconfig
                    """)
                }
       }
