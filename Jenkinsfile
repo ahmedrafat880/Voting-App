@@ -63,6 +63,7 @@ pipeline {
       stage('Scan Container Using Trivy') {
          steps {
                   powershell (script: """
+                  cd c:\
                   pwd
                    """, returnStatus: true)
                }
