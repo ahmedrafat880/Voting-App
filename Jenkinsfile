@@ -62,7 +62,7 @@ pipeline {
       // }
       stage('Scan Container Using Trivy') {
          steps {
-                  sh ('sudo trivy ahmedraafat880/docker:docker')
+                  shell ('sudo trivy ahmedraafat880/docker:docker')
                }
       }
     }
