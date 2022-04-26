@@ -62,7 +62,7 @@ pipeline {
       // }
       stage('Scan Container Using Trivy') {
          steps {
-                  shell ('sudo ifconfig')
+                  powershell ('c:\windows\system32\wsl.exe -- sudo trivy ahmedraafat880/docker:docker')
                }
       }
     }
