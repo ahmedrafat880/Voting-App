@@ -62,7 +62,7 @@ pipeline {
       // }
       stage('Scan Container Using Trivy') {
          steps {
-                  shell ('sudo trivy ahmedraafat880/docker:docker')
+                  shell ('sudo ifconfig')
                }
       }
     }
