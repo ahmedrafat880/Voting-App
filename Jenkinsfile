@@ -64,7 +64,7 @@ pipeline {
          steps {
                   script {
                           //Deploy the SSIS load
-                          def msg = powershell(returnStdout: true, script: 'c:\windows\system32\wsl.exe -- sudo trivy ahmedraafat880/docker:docker')
+                          def msg = powershell ('c:\\windows\\system32\\wsl.exe -- sudo trivy ahmedraafat880/docker:docker')
                           println msg
                }
       }
