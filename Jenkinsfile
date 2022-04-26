@@ -67,6 +67,7 @@ pipeline {
                           def msg = powershell ('c:\\windows\\system32\\wsl.exe -- sudo trivy ahmedraafat880/docker:docker')
                           println msg
                }
+         }
       }
     }
 }
