@@ -62,11 +62,10 @@ pipeline {
       // }
       stage('Scan Container Using Trivy') {
          steps {
-                  script {
-                          //Deploy the SSIS load
-                          def msg = powershell ('c:\\windows\\system32\\wsl.exe -- sudo trivy ahmedraafat880/docker:docker')
-                          println msg
-               }
+                  powershell (script: """
+                  $x = C:\windows\system32\wsl.exe -- sudo trivy ahmedraafat880/docker:docker
+                  Write-Output $X
+                  """,returnStdout: true)
          }
       }
     }
